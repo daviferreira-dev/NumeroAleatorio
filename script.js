@@ -1,4 +1,4 @@
-let numeroAleatorio = Math.floor(Math.random() * 100) + 1; 
+let numeroAleatorio = Math.floor(Math.random() * 10) + 1; 
 const inputNumero = document.getElementById('numero');
 const resultadoTexto = document.getElementById('resultado');
 let contadorTrocas = 0;
@@ -7,8 +7,8 @@ let dicas = document.getElementById('dicas');
 let botao = document.getElementById('botao');
 
 function verificarNumero(numeroEscolhido, resultadoElement) {
-    if (numeroEscolhido < 1 || numeroEscolhido > 100 || isNaN(numeroEscolhido)) {
-        alert("Por favor, insira um número entre 1 e 100.");
+    if (numeroEscolhido < 1 || numeroEscolhido > 10 || isNaN(numeroEscolhido)) {
+        alert("Por favor, insira um número entre 1 e 10.");
         resultadoElement.style.color = "orange";
         return false;
     }
@@ -29,7 +29,7 @@ function verificarChute() {
         dicas.textContent = ""
         resultadoTexto.textContent = `Você acertou! O número de tentativas foi ${contadorTrocas}.`;
         resultadoTexto.style.color = "green";
-        numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+        numeroAleatorio = Math.floor(Math.random() * 10) + 1;
         inputNumero.value = "";
         botao.textContent = "Acertou!"
         contadorTrocas++; 
