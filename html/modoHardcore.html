@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Jogo de Adivinhação</h1>
+    </header>
+    <main>
+        <p id="frase">Tente adivinhar o número secreto!</p>
+        <p id="dicas">O número secreto está entre 1 e 1000.</p>
+        <input type="number" id="numero" placeholder="Digite seu Número" min="1" max="1000" tabindex="0">
+        <button onclick="verificarChute()" id="botao" tabindex="1">Iniciar Jogo</button>
+        <p id="resultado"></p>
+        <p id="timer">Tempo restante: <span id="tempoRestante">10</span> segundos</p>
+    </main>
+    <footer>
+        <p>Pedro H.</p>
+        <p>Davi F.</p>
+    </footer>
+    <div id="cortina-esquerda" class="cortina"></div>
+    <div id="cortina-direita" class="cortina"></div>
+    
+    <audio id="somErro" src="/audios/faustao-errou.mp3"></audio>
+    <audio id="somAcerto" src="/audios/acerto-miseravi.mp3"></audio>
+    <script src="../js/modoHardcore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

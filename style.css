@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+a{
+    list-style: none;
+    text-decoration: none;
+}
+
 body {
     font-family: 'Space Mono', monospace;
     line-height: 1.8;
@@ -211,4 +216,36 @@ footer a {
 
 footer a:hover {
     color: #e0ffff; 
+}
+
+.cortina {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background: #B22222; 
+    z-index: 1000;
+    transition: width 1s cubic-bezier(0.25, 0.8, 0.25, 1); 
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+#cortina-esquerda {
+    left: 0;
+    border-right: none;
+}
+
+#cortina-direita {
+    right: 0;
+    border-left: none;
+}
+
+.cortina:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: #8B0000; /* Cor de borda escura para criar uma linha do meio */
+    transform: translate(-50%, -50%);
 }
